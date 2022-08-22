@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:3000
+
+### Insert One Product 
+POST {{baseUrl}}/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "test",
+    "description": "this is 3 product",
+    "price": 10
+}
+
+### Get All Products
+GET {{baseUrl}}/products HTTP/1.1
+
+### Get Single Product
+GET {{baseUrl}}/products/0.039814065516285746 HTTP/1.1
+
+### PATCH Product
+PATCH {{baseUrl}}/products/0.039814065516285746 HTTP/1.1
+Content-Type: application/json
+
+# {"title": "new product"}
+{"description": "this is 100 product"}
+# {"price": 100}
+
+### DELETE Product
+DELETE {{baseUrl}}/products/0.039814065516285746 HTTP/1.1
